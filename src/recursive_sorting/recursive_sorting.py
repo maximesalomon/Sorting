@@ -22,9 +22,12 @@ def merge(arrA, arrB):
 
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
-def merge_sort( arr ):
+def merge_sort(arr):
     # TO-DO
-
+    if len(arr) > 1:
+        arr1 = merge_sort(arr[0 : len(arr) // 2])
+        arr2 = merge_sort(arr[len(arr) // 2 : ])
+        arr = merge(arr1, arr2)
     return arr
 
 
